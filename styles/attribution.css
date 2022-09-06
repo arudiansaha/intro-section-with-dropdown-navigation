@@ -1,0 +1,27 @@
+.attribution {
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+    transform: translateY(-200%);
+    transition: transform ease 1200ms;
+    visibility: hidden;
+}
+
+.attribution__wrapper {
+    width: fit-content;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    border-radius: 1rem;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+body:hover .attribution {
+    visibility: visible;
+    transform: translateY(-50%);
+}
+
+.attribution a {
+    color: royalblue;
+    text-decoration: none;
+}

@@ -1,0 +1,29 @@
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(100% - 2rem, 100% - 4rem);
+    margin-inline: auto;
+    padding-block: clamp(1rem, 4vw, 1.25rem);
+    z-index: 99;
+}
+
+.header__child-one {
+    display: flex;
+    gap: 4rem;
+}
+
+.header__logo {
+    height: fit-content;
+}
+
+.header__child-two {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .header__child-two {
+        display: none;
+    }
+}

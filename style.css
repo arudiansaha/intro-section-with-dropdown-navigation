@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+@import url('./styles/header.css');
+@import url('./styles/navbar.css');
+@import url('./styles/dropdown.css');
+@import url('./styles/button.css');
+@import url('./styles/description.css');
+@import url('./styles/attribution.css');
+@import url('./styles/sidebar.css');
+
+:root {
+    --white: hsl(0, 0%, 98%);
+    --gray: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+    --paragraph: 18px;
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    font-family: 'Epilogue';
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.color__white {
+    color: var(--white);
+}
+
+.color__gray {
+    color: var(--gray);
+}
+
+.color__black {
+    color: var(--black);
+}
+
+.main__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: min(100% - 3rem, 95%);
+    margin-block: clamp(1rem, 4vw, 3rem);
+    margin-inline: auto;
+}
+
+.cover {
+    display: flex;
+    flex-basis: 50%;
+    height: fit-content;
+    align-items: center;
+}
+
+.cover__desktop {
+    height: 650px;
+    object-fit: cover;
+}
+
+.cover__mobile {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .main__container {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .cover__desktop {
+        display: none;
+    }
+
+    .cover__mobile {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}
