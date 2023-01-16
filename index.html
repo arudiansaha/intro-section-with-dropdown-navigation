@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Intro section about make remote work with your team easier.">
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -13,193 +14,21 @@
 </head>
 
 <body>
-  <header class="header__container color__gray">
-    <div class="header__child-one">
-      <img class="header__logo" src="./images/logo.svg" alt="snap's logo" />
-
-      <nav class="nav">
-        <span class="dropdown">
-          <button class="dropdown__select" onclick="showItemFeatures()">
-            Features<img class="dropdown__arrow-down" src="./images/icon-arrow-down.svg" alt=""><img
-              class="dropdown__arrow-up color__black" src="./images/icon-arrow-up.svg" alt="">
-          </button>
-
-          <div id="dropdownItemFeatures" class="dropdown__item">
-            <a class="dropdown__flex color__gray" href="#"><img src="./images/icon-todo.svg" alt="">Todo List</a>
-            <a class="dropdown__flex color__gray" href="#"><img src="./images/icon-calendar.svg" alt="">Calender</a>
-            <a class="dropdown__flex color__gray" href="#"><img src="./images/icon-reminders.svg" alt="">Reminders</a>
-            <a class="dropdown__flex color__gray" href="#"><img src="./images/icon-planning.svg" alt="">Planning</a>
-          </div>
-        </span>
-
-        <span class="dropdown">
-          <button class="dropdown__select" onclick="showItemCompany()">
-            Company<img class="dropdown__arrow-down" src="./images/icon-arrow-down.svg" alt=""><img
-              class="dropdown__arrow-up color__black" src="./images/icon-arrow-up.svg" alt="">
-          </button>
-
-          <div id="dropdownItemCompany" class="dropdown__item">
-            <a class="dropdown__block color__gray" href="#">History</a>
-            <a class="dropdown__block color__gray" href="#">Our Team</a>
-            <a class="dropdown__block color__gray" href="#">Blog</a>
-          </div>
-        </span>
-
-        <a class="nav__link color__gray" href="#">Careers</a>
-        <a class="nav__link color__gray" href="#">About</a>
-      </nav>
-    </div>
-
-    <div class="header__child-two">
-      <button class="button">Login</button>
-      <button class="button button__secondary">Register</button>
-    </div>
-
-    <button class="sidebar__menu" onclick="showSidebar()">
-      <img src="./images/icon-menu.svg" alt="">
-    </button>
-  </header>
-
-  <div id="sidebar-background" class="sidebar__background" />
-  <div id="sidebar" class="sidebar">
-    <div class="sidebar__menu-close">
-      <button onclick="closeSidebar()">
-        <img src="./images/icon-close-menu.svg" alt="">
-      </button>
-    </div>
-
-    <div class="sidebar__nav-wrapper">
-      <nav class="sidebar__nav">
-        <span class="dropdown">
-          <button class="dropdown__select color__gray" onclick="showItemFeaturesSidebar()">
-            Features<img class="dropdown__arrow-down" src="./images/icon-arrow-down.svg" alt=""><img
-              class="dropdown__arrow-up color__black" src="./images/icon-arrow-up.svg" alt="">
-          </button>
-
-          <div id="sidebarDropdownItemFeatures" style="display: none;" class="dropdown__item--custom">
-            <a class="dropdown__flex color__gray" href="#"><img src="./images/icon-todo.svg" alt="">Todo List</a>
-            <a class="dropdown__flex color__gray" href="#"><img src="./images/icon-calendar.svg" alt="">Calender</a>
-            <a class="dropdown__flex color__gray" href="#"><img src="./images/icon-reminders.svg" alt="">Reminders</a>
-            <a class="dropdown__flex color__gray" href="#"><img src="./images/icon-planning.svg" alt="">Planning</a>
-          </div>
-        </span>
-
-        <span class="dropdown">
-          <button class="dropdown__select color__gray" onclick="showItemCompanySidebar()">
-            Company<img class="dropdown__arrow-down" src="./images/icon-arrow-down.svg" alt=""><img
-              class="dropdown__arrow-up color__black" src="./images/icon-arrow-up.svg" alt="">
-          </button>
-
-          <div id="sidebarDropdownItemCompany" style="display: none;" class="dropdown__item--custom">
-            <a class="dropdown__block color__gray" href="#">History</a>
-            <a class="dropdown__block color__gray" href="#">Our Team</a>
-            <a class="dropdown__block color__gray" href="#">Blog</a>
-          </div>
-        </span>
-
-        <a class="nav__link color__gray" href="#">Careers</a>
-        <a class="nav__link color__gray" href="#">About</a>
-      </nav>
-    </div>
-
-    <div class="sidebar__button-wrapper">
-      <button class="button color__gray">Login</button>
-      <button class="button button__secondary color__gray">Register</button>
-    </div>
-  </div>
-  </div>
-
-  <main class="main__container">
-    <section class="description">
-      <header class="color__black">
-        <h1 class="description__title">Make remote work</h1>
-      </header>
-
-      <p class="description__text color__gray">
-        Get your team in sync, no matter your location. Streamline processes,
-        create team rituals, and watch productivity soar.
-      </p>
-
-      <button class="button button__primary--custom color__white">Learn more</button>
-
-      <div class="description__sponsored">
-        <img class="description__company" src="./images/client-databiz.svg"" alt="">
-        <img class=" description__company" src=" ./images/client-audiophile.svg" alt="">
-        <img class="description__company" src="./images/client-meet.svg" alt="">
-        <img class="description__company" src=" ./images/client-maker.svg" alt="">
-      </div>
-    </section>
-
-    <section class="cover">
-      <img class="cover__desktop" src="./images/image-hero-desktop.png" alt="Guy Hold an Laptop">
-      <img class="cover__mobile" src="./images/image-hero-mobile.png" alt="Guy Hold an Laptop">
-    </section>
-  </main>
-
+  <app-bar></app-bar>
+  <side-bar></side-bar>
+  <app-content></app-content>
   <footer class="attribution">
-    <div class="attribution__wrapper">
+    <p>
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/arudiansaha" target="_blank">Rizky Ardiansyah</a>.
-    </div>
+    </p>
   </footer>
-
-  <script>
-    function showItemFeatures() {
-      document.getElementById('dropdownItemFeatures').classList.toggle('active');
-    }
-
-    function showItemCompany() {
-      document.getElementById('dropdownItemCompany').classList.toggle('active');
-    }
-
-    function showSidebar() {
-      document.getElementById('sidebar-background').style.display = 'block';
-    }
-
-    function closeSidebar() {
-      document.getElementById('sidebar-background').style.display = 'none';
-    }
-
-    window.onclick = function (e) {
-      if (!e.target.matches('.dropdown__select')) {
-        const dropdownItem = document.getElementsByClassName('dropdown__item');
-
-        for (let i = 0; i < dropdownItem.length; i += 1) {
-          const openDropdown = dropdownItem[i];
-
-          if (openDropdown.classList.contains('active')) {
-            openDropdown.classList.remove('active');
-          }
-        }
-      }
-    }
-
-    function showItemFeaturesSidebar() {
-      let element = document.getElementById('sidebarDropdownItemFeatures');
-      const dropdownItem = element.style.display;
-
-      if (dropdownItem === 'none') {
-        element.style.display = 'flex';
-      }
-
-      if (dropdownItem === 'flex') {
-        element.style.display = 'none';
-      }
-    }
-
-    function showItemCompanySidebar() {
-      let element = document.getElementById('sidebarDropdownItemCompany');
-      const dropdownItem = element.style.display;
-
-      if (dropdownItem === 'none') {
-        element.style.display = 'flex';
-      }
-
-      if (dropdownItem === 'flex') {
-        element.style.display = 'none';
-      }
-    }
-  </script>
+  <script src="./src/components/navigation-bar.js"></script>
+  <script src="./src/components/user-button.js"></script>
+  <script src="./src/components/app-bar.js"></script>
+  <script src="./src/components/side-bar.js"></script>
+  <script src="./src/components/app-content.js"></script>
+  <script src="./src/utils/dropdown-action.js"></script>
 </body>
 
 </html>
